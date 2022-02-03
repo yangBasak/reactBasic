@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import '../App.css';
 function nav() {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", margin: "10px 0" }}>
@@ -9,7 +9,8 @@ function nav() {
           <Link to="/">home</Link>
         </li>
         <li style={{ listStyle: "none", paddingRight: "20px" }}>
-          <Link to="/someList">리스트</Link>
+          <NavLink to="/someList"
+            activeClassName="App-link">리스트</NavLink>
         </li>
       </ul>
       <div><Link to="/login">로그인</Link></div>
